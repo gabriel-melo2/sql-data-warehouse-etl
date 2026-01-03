@@ -1,15 +1,15 @@
-**Projeto Data Warehouse em SQL Server**
+## **Projeto Data Warehouse em SQL Server**
 **Visão Geral**
 
 Este projeto tem como objetivo demonstrar a construção de um Data Warehouse utilizando SQL Server, aplicando conceitos de ETL, modelagem dimensional e boas práticas de organização de dados, simulando um cenário real corporativo de BI.
 
-O projeto contempla:
+**O projeto contempla:**
 Separação clara entre Banco de Stage e Banco de Data Warehouse
 Uso de procedures SQL para carga de dados
 Modelo dimensional (Star Schema)
 Estrutura preparada para automação e expansão
 
-**Arquitetura do Projeto**
+## **Arquitetura do Projeto**
 
 **Fluxo de dados implementado:**
 Fonte de Dados
@@ -20,15 +20,15 @@ Procedures de carga (ETL em SQL)
    ↓
 Data Warehouse (modelo dimensional)
 
-**Estrutura de Bancos**
+## **Estrutura de Bancos**
 **Banco STAGE**
 Responsável por armazenar os dados tratados provenientes das fontes operacionais.
 Neste projeto, o Stage expõe os dados por meio de VIEWS, garantindo padronização e desacoplamento das fontes.
 
-Exemplo:
+**Exemplo:**
 VW_D_CLIENTES
 
-**Banco DATA WAREHOUSE**
+## **Banco DATA WAREHOUSE**
 Responsável por armazenar os dados consolidados, prontos para análise e consumo em ferramentas de BI.
 
 **Modelo adotado:** Dimensional (Star Schema)
@@ -43,7 +43,7 @@ D_VENDEDOR
 **Fato**
 F_VENDAS
 
-🔎 Neste repositório, a Dimensão Cliente é apresentada como exemplo completo de implementação.
+Neste repositório, a Dimensão Cliente é apresentada como exemplo completo de implementação.
 O mesmo padrão de estrutura e carga foi aplicado às demais dimensões e à tabela fato.
 
 **Estratégia de Carga (ETL)**
@@ -62,7 +62,7 @@ Confiabilidade em ambientes controlados
 Exemplo de Implementação – Dimensão Cliente
 Projeto Data Warehouse em SQL Server
 
-**Visão Geral**
+## **Visão Geral**
 
 Este projeto tem como objetivo demonstrar a construção de um Data Warehouse utilizando SQL Server, aplicando conceitos de ETL, modelagem dimensional e boas práticas de organização de dados, simulando um cenário real corporativo de BI.
 
@@ -72,9 +72,8 @@ Uso de procedures SQL para carga de dados
 Modelo dimensional (Star Schema)
 Estrutura preparada para automação e expansão
 
-**Arquitetura do Projeto**
+## **Arquitetura do Projeto**
 **Fluxo de dados implementado:**
-
 Fonte de Dados
    ↓
 Banco STAGE (tratamento e padronização)
@@ -83,13 +82,13 @@ Procedures de carga (ETL em SQL)
    ↓
 Data Warehouse (modelo dimensional)
 
-**Estrutura de Bancos**
+## **Estrutura de Bancos**
 Banco STAGE
 
 Responsável por armazenar os dados tratados provenientes das fontes operacionais.
 Neste projeto, o Stage expõe os dados por meio de VIEWS, garantindo padronização e desacoplamento das fontes.
 
-Exemplo:
+**Exemplo:**
 VW_D_CLIENTES
 
 **Banco DATA WAREHOUSE**
@@ -166,7 +165,7 @@ EXEC USP_FULL_D_CLIENTE;
 
 Essa procedure pode ser facilmente orquestrada por ferramentas de agendamento como SQL Server Agent ou pipelines de dados.
 
-✅** Boas Práticas Aplicadas**
+## **Boas Práticas Aplicadas**
 Separação entre Stage e Data Warehouse
 Uso de VIEWS no Stage para padronização
 Procedures reutilizáveis
@@ -183,5 +182,5 @@ SQL Server
 Modelagem Dimensional
 ETL via Stored Procedures
 
-📌 **Considerações Finais**
+## **Considerações Finais**
 Este projeto foi desenvolvido com foco em clareza, organização e aplicabilidade prática, simulando um ambiente real de Data Warehouse utilizado em cenários corporativos de BI.Procedure: USP_FULL_D_CLIENTE
