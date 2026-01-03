@@ -1,16 +1,16 @@
 ## **SQL Server Data Warehouse Project**
 
-##**Overview**
+## **Overview**
 This project demonstrates the design and implementation of a Data Warehouse using SQL Server, applying ETL concepts, dimensional modeling, and data organization best practices, simulating a real-world corporate BI scenario.
 
-##**The project includes:**
+## **The project includes:**
 Clear separation between Stage Database and Data Warehouse
 Use of SQL stored procedures for data loading
 Dimensional model (Star Schema)
 Architecture designed for automation and scalability
 Project Architecture
 
-##**Implemented data flow:**
+## **Implemented data flow:**
 Source Systems
 ↓
 STAGE Database (data cleansing and standardization)
@@ -19,7 +19,7 @@ Load Procedures (ETL in SQL)
 ↓
 Data Warehouse (dimensional model)
 
-##**Database Structure**
+## **Database Structure**
 
 **STAGE Database**
 Responsible for storing cleansed and standardized data extracted from operational source systems.
