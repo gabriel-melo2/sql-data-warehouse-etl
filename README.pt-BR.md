@@ -157,8 +157,6 @@ BEGIN
     SELECT *
     FROM PBS_PROCFIT_ST.DBO.VW_D_CLIENTES
 
-END
-
 **Execução da Procedure**
 EXEC USP_FULL_D_CLIENTE;
 
