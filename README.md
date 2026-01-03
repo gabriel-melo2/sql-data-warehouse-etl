@@ -1,4 +1,4 @@
-**SQL Server Data Warehouse Project**
+## **SQL Server Data Warehouse Project**
 
 **Overview**
 This project demonstrates the design and implementation of a Data Warehouse using SQL Server, applying ETL concepts, dimensional modeling, and data organization best practices, simulating a real-world corporate BI scenario.
