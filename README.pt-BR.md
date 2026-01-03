@@ -60,24 +60,20 @@ Facilidade de reprocessamento
 Confiabilidade em ambientes controlados
 
 Exemplo de Implementação – Dimensão Cliente
-📄 📊 Projeto Data Warehouse em SQL Server
-📌 Visão Geral
+Projeto Data Warehouse em SQL Server
+
+**Visão Geral**
 
 Este projeto tem como objetivo demonstrar a construção de um Data Warehouse utilizando SQL Server, aplicando conceitos de ETL, modelagem dimensional e boas práticas de organização de dados, simulando um cenário real corporativo de BI.
 
 O projeto contempla:
-
 Separação clara entre Banco de Stage e Banco de Data Warehouse
-
 Uso de procedures SQL para carga de dados
-
 Modelo dimensional (Star Schema)
-
 Estrutura preparada para automação e expansão
 
-🏗️ Arquitetura do Projeto
-
-Fluxo de dados implementado:
+**Arquitetura do Projeto**
+**Fluxo de dados implementado:**
 
 Fonte de Dados
    ↓
@@ -87,46 +83,38 @@ Procedures de carga (ETL em SQL)
    ↓
 Data Warehouse (modelo dimensional)
 
-🗂️ Estrutura de Bancos
-📦 Banco STAGE
+**Estrutura de Bancos**
+Banco STAGE
 
 Responsável por armazenar os dados tratados provenientes das fontes operacionais.
 Neste projeto, o Stage expõe os dados por meio de VIEWS, garantindo padronização e desacoplamento das fontes.
 
 Exemplo:
-
 VW_D_CLIENTES
 
-📊 Banco DATA WAREHOUSE
-
+**Banco DATA WAREHOUSE**
 Responsável por armazenar os dados consolidados, prontos para análise e consumo em ferramentas de BI.
 
-Modelo adotado: Dimensional (Star Schema)
+**Modelo adotado:** Dimensional (Star Schema)
 
-📐 Modelagem Dimensional
-Dimensões
-
+**Modelagem Dimensional**
+**Dimensões**
 D_CLIENTE
-
 D_PRODUTO
-
 D_EMPRESA
-
 D_VENDEDOR
 
-Fato
-
+**Fato**
 F_VENDAS
 
-🔎 Neste repositório, a Dimensão Cliente é apresentada como exemplo completo de implementação.
+Neste repositório, a Dimensão Cliente é apresentada como exemplo completo de implementação.
 O mesmo padrão de estrutura e carga foi aplicado às demais dimensões e à tabela fato.
 
-🔄 Estratégia de Carga (ETL)
-Tipo de carga
-
+**Estratégia de Carga (ETL)**
+**Tipo de carga**
 Carga Full
 
-Estratégia: TRUNCATE + INSERT
+**Estratégia:** TRUNCATE + INSERT
 
 **Essa abordagem foi escolhida por:**
 Simplicidade
@@ -177,7 +165,8 @@ EXEC USP_FULL_D_CLIENTE;
 
 
 Essa procedure pode ser facilmente orquestrada por ferramentas de agendamento como SQL Server Agent ou pipelines de dados.
-✅ Boas Práticas Aplicadas
+
+✅** Boas Práticas Aplicadas**
 Separação entre Stage e Data Warehouse
 Uso de VIEWS no Stage para padronização
 Procedures reutilizáveis
