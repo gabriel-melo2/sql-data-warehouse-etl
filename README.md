@@ -1,16 +1,16 @@
 ## **SQL Server Data Warehouse Project**
 
-**Overview**
+##**Overview**
 This project demonstrates the design and implementation of a Data Warehouse using SQL Server, applying ETL concepts, dimensional modeling, and data organization best practices, simulating a real-world corporate BI scenario.
 
-**The project includes:**
+##**The project includes:**
 Clear separation between Stage Database and Data Warehouse
 Use of SQL stored procedures for data loading
 Dimensional model (Star Schema)
 Architecture designed for automation and scalability
 Project Architecture
 
-**Implemented data flow:**
+##**Implemented data flow:**
 Source Systems
 ↓
 STAGE Database (data cleansing and standardization)
@@ -19,7 +19,7 @@ Load Procedures (ETL in SQL)
 ↓
 Data Warehouse (dimensional model)
 
-**Database Structure**
+##**Database Structure**
 
 **STAGE Database**
 Responsible for storing cleansed and standardized data extracted from operational source systems.
@@ -43,7 +43,7 @@ D_VENDEDOR
 **Fact Table:**
 F_VENDAS
 
-🔎 In this repository, the Customer Dimension is presented as a complete implementation example.
+In this repository, the Customer Dimension is presented as a complete implementation example.
 The same structural and loading pattern was applied to all other dimensions and the fact table.
 
 ETL Load Strategy
@@ -52,7 +52,7 @@ Full Load
 
 **Strategy:** TRUNCATE + INSERT
 
-**This approach was chosen due to:**
+## **This approach was chosen due to:**
 Simplicity
 Ease of reprocessing
 Reliability in controlled environments
@@ -61,7 +61,7 @@ Implementation Example – Customer Dimension
 
 **Procedure:** USP_FULL_D_CLIENTE
 
-**Applied logic:**
+## **Applied logic:**
 Checks whether the dimension table exists
 Creates the table if it does not exist
 Fully clears the dimension data
@@ -98,14 +98,14 @@ BEGIN
 END
 
 
-**Procedure Execution**
+## **Procedure Execution**
 
 EXEC USP_FULL_D_CLIENTE;
 
 
 This procedure can be easily orchestrated using scheduling tools such as SQL Server Agent or external data pipelines.
 
-**Applied Best Practices**
+## **Applied Best Practices**
 Clear separation between Stage and Data Warehouse
 Use of Stage VIEWS for data standardization
 Reusable stored procedures
@@ -120,5 +120,5 @@ SQL Server
 Dimensional Modeling
 ETL using Stored Procedures
 
-📌 **Final Considerations**
+## **Final Considerations**
 This project was developed with a strong focus on clarity, organization, and practical applicability, simulating a real-world corporate Data Warehouse environment commonly used in Business Intelligence scenarios.
