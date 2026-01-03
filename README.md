@@ -94,8 +94,6 @@ BEGIN
     INSERT INTO D_CLIENTE
     SELECT *
     FROM PBS_PROCFIT_ST.DBO.VW_D_CLIENTES
-END
-
 
 ## **Procedure Execution**
 
